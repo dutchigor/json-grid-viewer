@@ -1,0 +1,128 @@
+.vscode-light {
+  --object-color: #267F99;
+  --array-color: #795E26;
+  --string-color: #A31515;
+  --number-color: #098658;
+  --literal-color: #0000FF;
+  --identifier-color: #001080;
+}
+
+.vscode-dark, .vscode-high-contrast {
+  --object-color: #4EC9B0;
+  --array-color: #DCDCAA;
+  --string-color: #CE9178;
+  --number-color: #B5CEA8;
+  --literal-color: #569CD6;
+  --identifier-color: #9CDCFE;
+}
+
+body {
+  font-family: var(--vscode-editor-font-family);
+  font-weight: var(--vscode-editor-font-weight);
+  font-size: var(--vscode-editor-font-size);
+}
+table {
+  margin: 2px 0;
+  border-collapse: collapse;
+}
+td, th {
+  padding: 2px 4px;
+  vertical-align: baseline;
+}
+td.member, th.key, td.element, td.value {
+  border: 1px solid var(--vscode-editor-foreground);
+}
+.index, .collapsed {
+  white-space: nowrap;
+}
+.index::after {
+  margin-left: .2em;
+}
+td.index::after, .badge {
+  padding: 1px 3px;
+  display: inline-block;
+  border-radius: 0.5em;
+  color: 	var(--vscode-editor-background);
+}
+td.index.object::after {
+  content: 'Obj';
+}
+td.index.object::after, .object.badge {
+  background-color: var(--object-color);
+}
+td.index.array::after {
+  content: 'Arr';
+}
+td.index.array::after, .array.badge {
+  background-color: var(--array-color);
+}
+td.index.string::after {
+  content: 'Str';
+  background-color: var(--string-color);
+}
+td.index.number::after {
+  content: 'Num';
+  background-color: var(--number-color)
+}
+td.index.boolean::after {
+  content: 'Bool';
+  background-color: var(--literal-color);
+}
+td.index.null::after {
+  content: 'Null';
+  background-color: var(--literal-color);
+}
+.value.string {
+  color: var(--string-color);
+}
+.value.number {
+  color: var(--number-color);
+}
+.value.boolean {
+  color: var(--literal-color);
+}
+.value.null::before {
+  content: 'null';
+  color: var(--literal-color);
+}
+.array-el:not(.object) .value {
+  width: 100%;
+}
+.expand {
+  display: inline-block;
+  text-align: center;
+  width: 1em;
+  margin-left: 4px;
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 3px;
+}
+th.member {
+  position: relative;
+  border: 1px solid var(--vscode-editor-foreground);
+  border-top: 2px solid var(--vscode-editor-foreground);
+  border-bottom: 2px solid var(--vscode-editor-foreground);
+}
+th.key, th.member {
+  color: var(--identifier-color);
+  text-align: left;
+}
+table.object {
+  border: 2px solid;
+}
+th.index:first-child, th:last-child, td.index, td.member:last-child, td.value:last-child {
+  border-right: 2px solid var(--vscode-editor-foreground);
+}
+tr.array-el:last-child td.member, tr.array-el:last-child td.value {
+  border-bottom: 2px solid var(--vscode-editor-foreground);
+}
+
+.resizer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: -3px;
+  width: 6px;
+  cursor: col-resize;
+  user-select: none;
+}

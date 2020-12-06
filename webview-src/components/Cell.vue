@@ -2,16 +2,16 @@
   <template v-if="Array.isArray( element )">
     <span class="array collapsed">
       <span class="array badge">Array[{{ element.length }}]</span>
-      <span class="expand" @click="expanded = !expanded">{{ expanded ? '-' : '+' }}</span>
+      <span class="expand" @click="toggleExpanded">{{ expanded ? '-' : '+' }}</span>
     </span>
-    <array-cell v-if="expanded" :element="element" />
+    <array-table v-if="expanded" :array="element" />
   </template>
   <template v-else-if="typeof element === 'object' && element != null">
     <span class="object collapsed">
       <span class="object badge">Object[{{ Object.keys( element ).length}}]</span>
-      <span class="expand" @click="expanded = !expanded">{{ expanded ? '-' : '+' }}</span>
+      <span class="expand" @click="toggleExpanded">{{ expanded ? '-' : '+' }}</span>
     </span>
-    <object-cell v-if="expanded" :element="element" />
+    <object-table v-if="expanded" :member="element" />
   </template>
   <span v-else :class="['value', (element === null ? 'null' : typeof element)]">{{ element }}</span>
 </template>
@@ -24,6 +24,11 @@ export default {
   data() {
     return {
       expanded: false
+    }
+  },
+  methods: {
+    toggleExpanded() {
+      this.expanded = !this.expanded
     }
   },
   created() {

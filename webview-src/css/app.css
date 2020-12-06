@@ -98,7 +98,6 @@ td.index.null::after {
   border-radius: 3px;
 }
 th.member {
-  position: relative;
   border: 1px solid var(--vscode-editor-foreground);
   border-top: 2px solid var(--vscode-editor-foreground);
   border-bottom: 2px solid var(--vscode-editor-foreground);
@@ -116,13 +115,10 @@ th.index:first-child, th:last-child, td.index, td.member:last-child, td.value:la
 tr.array-el:last-child td.member, tr.array-el:last-child td.value {
   border-bottom: 2px solid var(--vscode-editor-foreground);
 }
-
-.resizer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: -3px;
-  width: 6px;
-  cursor: col-resize;
-  user-select: none;
+th.object.key, td.object.element {
+  border-top: 0;
+}
+tr.object-hdr th {
+  padding: 0;
+  border: 0;
 }

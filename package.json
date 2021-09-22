@@ -20,7 +20,7 @@
             "filenamePattern": "*.json"
           }
         ],
-        "priority": "default"
+        "priority": "option"
       }
     ]
   },

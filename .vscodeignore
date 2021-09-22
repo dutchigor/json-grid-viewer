@@ -1,5 +1,5 @@
-/node_modules
-/webview-src
-/babel.config.js
-/vue.config.js
-/.vscode
+node_modules
+webview-src
+babel.config.js
+vue.config.js
+.vscode

@@ -3,6 +3,7 @@
   "publisher": "DutchIgor",
   "displayName": "JSON grid viewer",
   "version": "0.1.0",
+  "repository": "github:dutchigor/json-grid-viewer",
   "engines": {
     "vscode": "^1.46.0"
   },

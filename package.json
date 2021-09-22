@@ -8,12 +8,12 @@
   },
   "main": "./editor/main.js",
   "activationEvents": [
-    "onCustomEditor:jsonGridViewer"
+    "onCustomEditor:jsonGridViewer.json"
   ],
   "contributes": {
     "customEditors": [
       {
-        "viewType": "jsonGridViewer",
+        "viewType": "jsonGridViewer.json",
         "displayName": "JSON Grid",
         "selector": [
           {

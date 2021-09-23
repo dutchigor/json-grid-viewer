@@ -1,12 +1,29 @@
 {
   "name": "json-viewer",
   "publisher": "DutchIgor",
-  "displayName": "JSON grid viewer",
+  "displayName": "JSON Grid Viewer",
+  "description": "Get a better overview of the content in a JSON file by viewing it in an resizable grid.",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#d4e1ef",
+    "theme": "light"
+  },
   "version": "0.1.0",
   "repository": "github:dutchigor/json-grid-viewer",
   "engines": {
     "vscode": "^1.46.0"
   },
+  "categories": [
+    "Visualization"
+  ],
+  "keywords": [
+    "json",
+    "drilldown",
+    "hierarchy",
+    "grid",
+    "overview"
+  ],
+  "qna": "https://github.com/dutchigor/json-grid-viewer/discussions",
   "main": "./editor/main.js",
   "activationEvents": [
     "onCustomEditor:jsonGridViewer.json"
@@ -28,7 +45,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "vscode:prepublish": "npm run build"
   },
   "dependencies": {
     "core-js": "^3.18.0",
@@ -58,9 +76,5 @@
     },
     "rules": {}
   },
-  "files": [
-    "editor/*",
-    "webview/*",
-    "demo.webp"
-  ]
+  "license": "SEE LICENSE IN LICENSE"
 }

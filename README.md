@@ -1,5 +1,5 @@
 # json-grid-viewer
-This extension allows you get a better overview of the content in a JSON file by showing it in an resizable grid.
+This extension allows you get a better overview of the content in a JSON file by showing it in a resizable grid.
 - Columns are resizable.
 - Each object and array is collapsed by default but can be expanded to see all contents
 - Arrays of objects show in a table format

@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "core-js": "^3.18.0",
+    "hjson": "^3.2.2",
     "vue": "^3.2.13"
   },
   "devDependencies": {

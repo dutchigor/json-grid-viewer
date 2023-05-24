@@ -1,4 +1,5 @@
 const vscode = require( 'vscode' )
+const hjson = require('hjson')
 const path = require( 'path' )
 const getNonce  = require( './util' ).getNonce
 
@@ -74,7 +75,7 @@ class JsonGridViewer {
 	updateWebview() {
 		let doc
 		try {
-			doc = JSON.parse( this.document.getText() )
+			doc = hjson.parse( this.document.getText() )
 		} catch (error) {
 			return
 		}

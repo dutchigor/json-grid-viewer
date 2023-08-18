@@ -1,5 +1,16 @@
-node_modules
+#node_modules
 webview-src
 babel.config.js
 vue.config.js
 .vscode
+
+
+.vscode/**
+.vscode-test/**
+test/**
+.gitignore
+.yarnrc
+vsc-extension-quickstart.md
+**/jsconfig.json
+**/*.map
+**/.eslintrc.json

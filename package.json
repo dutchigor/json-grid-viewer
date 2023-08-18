@@ -1,6 +1,6 @@
 {
   "name": "json-viewer",
-  "publisher": "DutchIgor",
+  "publisher": "greenflute",
   "displayName": "JSON Grid Viewer",
   "description": "Get a better overview of the content in a JSON file by viewing it in an resizable grid.",
   "icon": "icon.png",
@@ -8,9 +8,10 @@
     "color": "#d4e1ef",
     "theme": "light"
   },
-  "version": "0.1.0",
-  "repository": "github:dutchigor/json-grid-viewer",
+  "version": "0.1.1",
+  "repository": "github:greenflute/json-grid-viewer",
   "engines": {
+    "node": "16.x",
     "vscode": "^1.46.0"
   },
   "categories": [
@@ -23,7 +24,7 @@
     "grid",
     "overview"
   ],
-  "qna": "https://github.com/dutchigor/json-grid-viewer/discussions",
+  "qna": "https://github.com/greenflute/json-grid-viewer/discussions",
   "main": "./editor/main.js",
   "activationEvents": [
     "onCustomEditor:jsonGridViewer.json"
